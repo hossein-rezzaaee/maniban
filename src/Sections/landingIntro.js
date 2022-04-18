@@ -36,7 +36,7 @@ const LandingIntro = () => {
         sx={{
           position: 'relative',
           width: '100%',
-          height: '200px',
+          height: '250px',
           overflow: 'hidden',
           display: 'flex',
           justifyContent: 'space-between',
@@ -52,7 +52,7 @@ const LandingIntro = () => {
             <img
               src="https://www.freepnglogos.com/uploads/burger-png/burger-png-png-images-yellow-images-12.png"
               alt="logo"
-              width="150"
+              width="170"
             />
           </Box>
         ))}
