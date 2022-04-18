@@ -1,15 +1,19 @@
 import { Typography } from '@mui/material';
-import Toolbar from '@mui/material/Toolbar';
 import BasketBadge from 'Components/HeaderAction/BasketBadge';
 import MultiLang from 'Components/HeaderAction/MultiLang';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Box from '@mui/material/Box';
+import { langCtx } from 'App';
+import { useContext } from 'react';
+import { text } from 'Constants/text';
 
 const TopHeader = () => {
+  const { lang } = useContext(langCtx);
+
   return (
-    <Toolbar
+    <Box
       sx={{
-        display: 'felx',
+        display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
       }}
@@ -19,15 +23,20 @@ const TopHeader = () => {
         <MultiLang />
       </Box>
       <Box display="flex" gap={5}>
-        <Typography>order without internet</Typography>
+        <Typography>{text.header.orderPhone[lang]}</Typography>
         <a href="tel:12345">
-          <Box display="flex" alignItems="center" fontWeight="bolder">
+          <Box
+            component={Typography}
+            display="flex"
+            alignItems="center"
+            fontWeight="bolder"
+          >
             <PhoneIcon />
             12345
           </Box>
         </a>
       </Box>
-    </Toolbar>
+    </Box>
   );
 };
 
