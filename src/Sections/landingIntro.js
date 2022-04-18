@@ -50,9 +50,9 @@ const LandingIntro = () => {
             }}
           >
             <img
-              src="https://haida.shop/wp-content/uploads/2020/04/logo-persian-haida.png"
+              src="https://www.freepnglogos.com/uploads/burger-png/burger-png-png-images-yellow-images-12.png"
               alt="logo"
-              width="100"
+              width="150"
             />
           </Box>
         ))}
